@@ -16,6 +16,7 @@ import java.io.File.*;
 // INSTANCES
 PureData pd;
 Song[] songs;
+Visualizer visualizer;
 Player player;
 
 // VARIABLES
