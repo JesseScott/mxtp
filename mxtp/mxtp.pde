@@ -21,7 +21,11 @@ Player player;
 
 // VARIABLES
 int NUM_SONGS;
- 
+String[] pdMessages = new String[]{
+  "VOLUME_UP", "VOLUME_DOWN", 
+  "NEXT_SONG", "PREV_SONG",
+  "START", "STOP", "SHUFFLE"
+};
  
 // SETUP
 void setup() {
@@ -32,11 +36,14 @@ void setup() {
   // Player
   player = new Player();
   NUM_SONGS = player.getNumberOfSongs();
-  println("NUM_SONGS = " + NUM_SONGS);
+  
   
   // LibPd
   pd = new PureData(this, 48000, 0, 2);
   pd.openPatch("pd/mxtp.pd");
+  for(int i = 0; i < pdMessages.length; i++) {
+    pd.subscribe(pdMessages[i]); 
+  }
   pd.start();
   
 }
@@ -56,6 +63,12 @@ void keyPressed() {
     }
     else if(keyCode == RIGHT) {
       player.nextSong();
+    } 
+    else if(keyCode == UP) {
+      player.volumeUp();
+    } 
+    else if(keyCode == DOWN) {
+      player.volumeDown();
     }  
   }
   else {

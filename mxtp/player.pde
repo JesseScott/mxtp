@@ -15,6 +15,14 @@ class Player {
   
   // METHODS
   
+  void volumeUp() {
+    
+  }
+  
+  void volumeDown() {
+    
+  }
+  
   void prevSong() {
     
   }
@@ -38,6 +46,7 @@ class Player {
     // Return
     return num;
   }
+  
   
   
 } /* eoc */
