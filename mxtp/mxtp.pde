@@ -45,17 +45,19 @@ void draw(){
 }
  
  
-// KEY + MOUSE
+// KEYBOARD
 void keyPressed() {
-  
-}
- 
-void mousePressed() {
-  
-}
- 
-// CUSTOM
- 
-void myFunction() {
-  
+  if(key == CODED) {
+    if(keyCode == LEFT) {
+      player.prevSong();
+    }
+    else if(keyCode == RIGHT) {
+      player.nextSong();
+    }  
+  }
+  else {
+    if(key == ' ') {
+       player.togglePlayPause(); 
+    }
+  }
 }
