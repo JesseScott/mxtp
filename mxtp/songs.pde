@@ -16,7 +16,25 @@ class Song {
   
   // METHODS
   
-
+  void setup() {
+    
+  }
+  
+  void update() {
+    
+  }
+  
+  void play() {
+    
+  }
+  
+  void pause() {
+    
+  }
+  
+  void stop() {
+    
+  }
   
   
 } /* eoc */
