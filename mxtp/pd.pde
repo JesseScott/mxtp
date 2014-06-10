@@ -2,7 +2,7 @@
 /* MANAGER FOR PURE DATA */
 
 // PD
-
+/*
 void pdPrint(String s) {
   println("Print is " + s);
 }
@@ -18,3 +18,4 @@ void receiveFloat(String source, float x) {
 void receiveSymbol(String source, String sym) {
   println("Symbol is " + source + "  " + sym);
 }
+*/

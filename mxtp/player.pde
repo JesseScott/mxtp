@@ -27,5 +27,17 @@ class Player {
     
   }
   
+  int getNumberOfSongs() {
+    
+    // Set Path
+    File folder = new File(dataPath("songs/"));
+    
+    // Get Number
+    int num = new File(folder.toString()).listFiles().length;
+
+    // Return
+    return num;
+  }
+  
   
 } /* eoc */

@@ -11,11 +11,11 @@
  
 // IMPORTS
 import org.puredata.processing.PureData;
- 
+import java.io.File.*;
  
 // INSTANCES
 PureData pd;
-Song[] songs;
+//Song[] songs;
 Player player;
 
 // VARIABLES
@@ -30,10 +30,12 @@ void setup() {
   
   // Player
   player = new Player();
+  NUM_SONGS = player.getNumberOfSongs();
+  println("NUM_SONGS = " + NUM_SONGS);
   
   // LibPd
   pd = new PureData(this, 48000, 0, 2);
-  pd.openPatch("/pd/mxtp.pd");
+  pd.openPatch("pd/mxtp.pd");
   pd.start();
   
 }
