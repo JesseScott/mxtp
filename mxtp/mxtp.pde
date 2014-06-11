@@ -24,7 +24,7 @@ int NUM_SONGS;
 String[] pdMessages = new String[]{
   "VOLUME_UP", "VOLUME_DOWN", 
   "NEXT_SONG", "PREV_SONG",
-  "START", "STOP", "SHUFFLE"
+  "START_PLAYER", "STOP_PLAYER", "SHUFFLE"
 };
  
 // SETUP
